@@ -13,7 +13,7 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = async function(knex, Promise) {
-  const fkExists = await knex.schema.hasColumn('vendors', 'company_id')
+  const fkExists = await knex.schema.hasColumn('vendors', 'user_id')
 
   return knex.schema.table('vendors',  (vendorsTable)=>{
     if(fkExists){
