@@ -49,7 +49,7 @@ passport.use(registerLocalStrategy())
 passport.serializeUser(configSerializeUser())
 passport.deserializeUser(configDeserializeUser())
 
-const appDb = knex( dbConfigObj[process.env.NODE_ENV] )
+const appDb = knex( dbConfigObj )
 Model.knex(appDb)
 app.locals.db = appDb
 

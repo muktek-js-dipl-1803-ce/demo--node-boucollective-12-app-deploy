@@ -25,7 +25,6 @@ const productionConfig = Object.assign(
   { client: 'pg', connection: process.env.DATABASE_URL }
 )
 
-module.exports = {
-  development: devConfig,
-  production: productionConfig
-}
+
+
+module.exports = process.env.NODE_ENV === 'production' ? productionConfig : devConfig
