@@ -53,6 +53,7 @@
   ```
 
 8) Configure deploy script to minify the react / es6 code
+
   ```
   "scripts" : {
     ...
@@ -62,4 +63,10 @@
     "deploy": "npm-run-all deploy:build dep loy:commit-production deploy:push-remote",
     ...
   }
+  ```
+
+9) If you have error, check the logs
+
+  ```
+  heroku logs
   ```
