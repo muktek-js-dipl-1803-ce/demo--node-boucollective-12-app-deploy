@@ -25,7 +25,7 @@ const authRouter = require('./src/routers/authRouter')
 
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000
 
 
 if(typeof process.env.NODE_ENV === 'undefined'){
