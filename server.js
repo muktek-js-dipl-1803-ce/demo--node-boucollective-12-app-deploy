@@ -50,6 +50,7 @@ passport.serializeUser(configSerializeUser())
 passport.deserializeUser(configDeserializeUser())
 
 
+
 // const appDb = knex( dbConfigObj.development )
 const appDb = knex( dbConfigObj )
 
